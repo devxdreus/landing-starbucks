@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Landing Page</title>
+
+  <!-- style-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <section>
+    
+  <!-- background -->
+  <div class="circle"></div>
+    
+  <!-- Header -->
+    <header>
+      <a href="#"><img src="img/logo.png" alt="Starbucks" class="logo"></a>
+
+      <div class="nav-toggle" onclick="navToggle()"><span></span><span></span><span></span></div>
+
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Content -->
+    <div class="banner">
+
+      <div class="text-box">
+        <h2>It's Not Just a Coffee<br>It's <span>Starbucks</span></h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sunt perspiciatis odio ratione deleniti officiis reprehenderit. Recusandae ipsum, tenetur soluta, eaque inventore modi quae molestias a commodi, consequatur sit autem?</p>
+        <button type="button" class="button">Learn More</button>
+      </div>
+
+      <div class="img-box">
+        <img src="img/img1.png" alt="Starbucks Drinks" class="banner-img">
+      </div>
+      
+    </div>
+    
+    <div class="thumb">
+      <ul>
+        <li><img src="img/thumb1.png" alt="Drink 1" onclick="imgChange(1);circleChange('#017143')"></li>
+        <li><img src="img/thumb2.png" alt="Drink 2" onclick="imgChange(2);circleChange('#eb7495')"></li>
+        <li><img src="img/thumb3.png" alt="Drink 3" onclick="imgChange(3);circleChange('#d752b1')"></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- social -->
+  <div class="social-icon">
+    <ul>
+      <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+      <li><a href="#"><img src="img/twitter.png" alt="twitter"></a></li>
+      <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+    </ul>
+  </div>
+
+
+  <!-- script -->
+  <script>
+    function imgChange(img){
+      document.querySelector('.banner-img').src = `img/img${img}.png`;
+    }
+
+    function circleChange(color){
+      document.querySelector('.circle').style.background = color;
+    }
+
+    function navToggle(){
+      document.querySelector('.nav-toggle').classList.toggle('active');
+      document.querySelector('.nav-menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
